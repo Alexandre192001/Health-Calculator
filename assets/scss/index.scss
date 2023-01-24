@@ -10,7 +10,7 @@ $font-family:"Poppins";
 }
 
 
-::placeholder{
+::placeholder {
     color: #fff;
     font-size: 1rem;
 }
@@ -37,7 +37,7 @@ html {
         cursor: pointer;
         background-color: #000;
         padding: .2rem .5rem;
-        border-radius:100%;
+        border-radius: 100%;
         box-shadow: inset 1px 1px 1rem #fff;
     }
 
@@ -60,16 +60,16 @@ html {
             outline: none;
             cursor: pointer;
 
-            &:nth-child(1){
-                background-color:cornflowerblue;
+            &:nth-child(1) {
+                background-color: cornflowerblue;
             }
 
-            &:nth-child(2){
-                background-color:teal;
+            &:nth-child(2) {
+                background-color: teal;
             }
 
-            &:nth-child(3){
-                background-color:crimson;
+            &:nth-child(3) {
+                background-color: crimson;
             }
         }
     }
@@ -85,9 +85,9 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
 
-    
+
+
 
     img {
         filter: blur(3px) invert(20%);
@@ -148,8 +148,9 @@ html {
         min-height: 60rem;
         background-color: #0074B8;
         transition: all 1s ease;
+        overflow: hidden;
 
-        &.dark{
+        &.dark {
             background-color: #000;
         }
 
@@ -167,9 +168,10 @@ html {
             justify-content: center;
             margin-top: 8rem;
 
+
             .resultado-wrapper {
                 background-color: #fff;
-                width: 35rem;
+                width: 80%;
                 height: 8rem;
                 border-radius: .4rem;
                 margin-bottom: 2rem;
@@ -238,8 +240,9 @@ html {
         min-height: 60rem;
         background-color: #0074B8;
         transition: all 1s ease;
-        
-        &.dark{
+        overflow: hidden;
+
+        &.dark {
             background-color: #000;
         }
 
@@ -259,19 +262,24 @@ html {
 
             .resultado-caloria-wrapper {
                 background-color: #fff;
-                width: 50rem;
+                width: 80%;
                 height: 8rem;
                 border-radius: .4rem;
                 margin-bottom: 2rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                overflow-x: hidden;
+                overflow-y: auto;
 
                 .resultado-caloria {
                     margin-left: 1rem;
+                    margin-right: 1rem;
 
-                    h4{
-                        span{
+                    h4 {
+                        border-bottom: solid 1px #000;
+
+                        span {
                             color: green;
                         }
                     }
@@ -352,8 +360,9 @@ html {
     justify-content: center;
     flex-direction: column;
     transition: all 1s ease;
-        
-    &.dark{
+    overflow: hidden;
+
+    &.dark {
         background-color: #000;
     }
 
@@ -374,6 +383,116 @@ html {
             text-decoration: none;
             padding: 1rem;
             border-radius: .5rem;
+        }
+    }
+}
+
+
+@media(max-width:810px) {
+    .container-calorias {
+        .container-caloria-wrapper {
+            .resultado-caloria-wrapper {
+                width: 80%;
+
+                .resultado-caloria {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:670px) {
+    .container-header {
+        .description-header {
+            margin-left: 1rem;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .container-main {
+        .container-imc {
+            .title-imc {
+                font-size: 2rem;
+            }
+
+            .container-imc-wrapper {
+                width: 90%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+
+                .resultado-wrapper {
+                    width: 100%;
+                    margin-left: 1rem;
+                }
+
+
+                .group-input-wrapper {
+                    width: 90%;
+
+                    .group-input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .container-calorias {
+            .title-caloria {
+                font-size: 2rem;
+            }
+
+            .container-caloria-wrapper {
+                .resultado-caloria-wrapper {
+                    width: 80%;
+                    height: 20rem;
+                    position: relative;
+
+                    .resultado-caloria {
+                        width: 70%;
+                        position: absolute;
+                        top: 1rem;
+                    }
+                }
+
+                .group-input-caloria {
+                    width: 90%;
+
+                    .group-caloria {
+                        width: 100%;
+                        
+                        button{
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .container-footer{
+        height: 30rem;
+        
+        .group-footer-wrapper{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .group-footer-nav{
+                width: 90%;
+                flex-direction: column;
+                a{
+                    width: 100%;
+                }
+            }
         }
     }
 }

@@ -125,6 +125,7 @@ html {
   min-height: 60rem;
   background-color: #0074B8;
   transition: all 1s ease;
+  overflow: hidden;
 }
 .container-main .container-imc.dark {
   background-color: #000;
@@ -144,7 +145,7 @@ html {
 }
 .container-main .container-imc .container-imc-wrapper .resultado-wrapper {
   background-color: #fff;
-  width: 35rem;
+  width: 80%;
   height: 8rem;
   border-radius: 0.4rem;
   margin-bottom: 2rem;
@@ -201,6 +202,7 @@ html {
   min-height: 60rem;
   background-color: #0074B8;
   transition: all 1s ease;
+  overflow: hidden;
 }
 .container-main .container-calorias.dark {
   background-color: #000;
@@ -220,16 +222,22 @@ html {
 }
 .container-main .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper {
   background-color: #fff;
-  width: 50rem;
+  width: 80%;
   height: 8rem;
   border-radius: 0.4rem;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .container-main .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper .resultado-caloria {
   margin-left: 1rem;
+  margin-right: 1rem;
+}
+.container-main .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper .resultado-caloria h4 {
+  border-bottom: solid 1px #000;
 }
 .container-main .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper .resultado-caloria h4 span {
   color: green;
@@ -297,6 +305,7 @@ html {
   justify-content: center;
   flex-direction: column;
   transition: all 1s ease;
+  overflow: hidden;
 }
 .container-footer.dark {
   background-color: #000;
@@ -317,6 +326,81 @@ html {
   text-decoration: none;
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+@media (max-width: 810px) {
+  .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper {
+    width: 80%;
+  }
+  .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper .resultado-caloria {
+    width: 100%;
+  }
+}
+@media (max-width: 670px) {
+  .container-header .description-header {
+    margin-left: 1rem;
+  }
+  .container-header .description-header h1 {
+    font-size: 2.5rem;
+  }
+  .container-main .container-imc .title-imc {
+    font-size: 2rem;
+  }
+  .container-main .container-imc .container-imc-wrapper {
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .container-main .container-imc .container-imc-wrapper .resultado-wrapper {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .container-main .container-imc .container-imc-wrapper .group-input-wrapper {
+    width: 90%;
+  }
+  .container-main .container-imc .container-imc-wrapper .group-input-wrapper .group-input {
+    width: 100%;
+  }
+  .container-main .container-calorias .title-caloria {
+    font-size: 2rem;
+  }
+  .container-main .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper {
+    width: 80%;
+    height: 20rem;
+    position: relative;
+  }
+  .container-main .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper .resultado-caloria {
+    width: 70%;
+    position: absolute;
+    top: 1rem;
+  }
+  .container-main .container-calorias .container-caloria-wrapper .group-input-caloria {
+    width: 90%;
+  }
+  .container-main .container-calorias .container-caloria-wrapper .group-input-caloria .group-caloria {
+    width: 100%;
+  }
+  .container-main .container-calorias .container-caloria-wrapper .group-input-caloria .group-caloria button {
+    margin-bottom: 1rem;
+  }
+  .container-footer {
+    height: 30rem;
+  }
+  .container-footer .group-footer-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-footer .group-footer-wrapper .group-footer-nav {
+    width: 90%;
+    flex-direction: column;
+  }
+  .container-footer .group-footer-wrapper .group-footer-nav a {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
