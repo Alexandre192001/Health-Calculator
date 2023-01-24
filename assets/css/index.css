@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+::placeholder {
+  color: #fff;
+  font-size: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cfg-wrapper {
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+  z-index: 5000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cfg-wrapper i {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  padding: 0.2rem 0.5rem;
+  border-radius: 100%;
+  box-shadow: inset 1px 1px 1rem #fff;
+}
+.cfg-wrapper .themer-colors-pages {
+  width: 5rem;
+  height: 5rem;
+  background-color: #313131;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 1rem;
+}
+.cfg-wrapper .themer-colors-pages button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.cfg-wrapper .themer-colors-pages button:nth-child(1) {
+  background-color: cornflowerblue;
+}
+.cfg-wrapper .themer-colors-pages button:nth-child(2) {
+  background-color: teal;
+}
+.cfg-wrapper .themer-colors-pages button:nth-child(3) {
+  background-color: crimson;
+}
+
+.container-header {
+  min-height: 60rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-header img {
+  filter: blur(3px) invert(20%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  animation: animation-header-img 15s infinite linear;
+}
+@keyframes animation-header-img {
+  from {
+    transform: scale(1.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.container-header .description-header {
+  z-index: 1;
+  margin-left: 15rem;
+  color: #fff;
+}
+.container-header .description-header h1 {
+  font-size: 5rem;
+}
+.container-header .description-header a {
+  display: block;
+  width: 13rem;
+  background-color: #00446B;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  transition: all 0.4s ease;
+}
+.container-header .description-header a:hover {
+  transform: scale(0.8);
+}
+
+.container-main {
+  width: 100%;
+  height: auto;
+}
+.container-main .container-imc {
+  min-height: 60rem;
+  background-color: #0074B8;
+  transition: all 1s ease;
+}
+.container-main .container-imc.dark {
+  background-color: #000;
+}
+.container-main .container-imc .title-imc {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+.container-main .container-imc .container-imc-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.container-main .container-imc .container-imc-wrapper .resultado-wrapper {
+  background-color: #fff;
+  width: 35rem;
+  height: 8rem;
+  border-radius: 0.4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-main .container-imc .container-imc-wrapper .resultado-wrapper .resultado {
+  margin-left: 1rem;
+}
+.container-main .container-imc .container-imc-wrapper .group-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+.container-main .container-imc .container-imc-wrapper .group-input-wrapper .group-input {
+  position: relative;
+  width: 80%;
+}
+.container-main .container-imc .container-imc-wrapper .group-input-wrapper .group-input input {
+  width: 100%;
+  padding: 2rem;
+  background-color: #47B1EE;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  color: #fff;
+}
+.container-main .container-imc .container-imc-wrapper .group-input-wrapper .group-input label {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  color: #fff;
+  border-bottom: solid 1px #fff;
+}
+.container-main .container-imc .container-imc-wrapper .group-input-wrapper .group-input button {
+  border: none;
+  width: 15rem;
+  background-color: #00446B;
+  color: #fff;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  transition: all 0.4s ease;
+}
+.container-main .container-imc .container-imc-wrapper .group-input-wrapper .group-input button:hover {
+  background-color: #fff;
+  color: #00446B;
+  border: solid 2px #00446B;
+}
+.container-main .container-calorias {
+  min-height: 60rem;
+  background-color: #0074B8;
+  transition: all 1s ease;
+}
+.container-main .container-calorias.dark {
+  background-color: #000;
+}
+.container-main .container-calorias .title-caloria {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+.container-main .container-calorias .container-caloria-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.container-main .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper {
+  background-color: #fff;
+  width: 50rem;
+  height: 8rem;
+  border-radius: 0.4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-main .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper .resultado-caloria {
+  margin-left: 1rem;
+}
+.container-main .container-calorias .container-caloria-wrapper .resultado-caloria-wrapper .resultado-caloria h4 span {
+  color: green;
+}
+.container-main .container-calorias .container-caloria-wrapper .group-input-caloria {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.container-main .container-calorias .container-caloria-wrapper .group-input-caloria .group-caloria {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.container-main .container-calorias .container-caloria-wrapper .group-input-caloria .group-caloria input {
+  padding: 2rem;
+  background-color: #47B1EE;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  color: #fff;
+}
+.container-main .container-calorias .container-caloria-wrapper .group-input-caloria .group-caloria label {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  color: #fff;
+  border-bottom: solid 2px #fff;
+}
+.container-main .container-calorias .container-caloria-wrapper .group-input-caloria .group-caloria select {
+  padding: 2rem;
+  background-color: #47B1EE;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+.container-main .container-calorias .container-caloria-wrapper .group-input-caloria .group-caloria button {
+  border: none;
+  width: 15rem;
+  background-color: #00446B;
+  color: #fff;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  transition: all 0.4s ease;
+}
+.container-main .container-calorias .container-caloria-wrapper .group-input-caloria .group-caloria button:hover {
+  background-color: #fff;
+  color: #00446B;
+  border: solid 2px #00446B;
+}
+
+.container-footer {
+  height: 20rem;
+  background-color: #00446B;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1s ease;
+}
+.container-footer.dark {
+  background-color: #000;
+}
+.container-footer .group-footer-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.container-footer .group-footer-nav a {
+  display: block;
+  text-align: center;
+  width: 10rem;
+  background-color: #47B1EE;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/*# sourceMappingURL=index.css.map */

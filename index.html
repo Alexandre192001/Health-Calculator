@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script defer src="./assets/js/index.js"></script>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+
+    <nav class="cfg-wrapper">
+
+        <i class="bi bi-moon-stars-fill"></i>
+    </nav>
+
+    <header class="container-header">
+        <img src="https://media.istockphoto.com/id/1136667774/pt/vetorial/health-insurance-vector-illustration-medical-protection-medical-insurance-concepts-flat.jpg?s=612x612&w=0&k=20&c=C72enBlTlVInboACsglFTC3gWX66FtutMORe9azP4uM=" alt="">
+        
+        <div class="description-header">
+            <h1 class="title-header">Health Calculator</h1>
+            <a href="#imc"><i class="bi bi-mouse-fill"></i> Saiba mais <i class="bi bi-caret-down-fill"></i></a>
+        </div>      
+    </header>    
+
+    <main class="container-main" >
+
+        <section class="container-imc" id="imc">
+            <h1 class="title-imc">Calculadora IMC</h1>
+            <div class="container-imc-wrapper">
+                <div class="resultado-wrapper">
+                    <div class="resultado">
+                        <h1>IMC : <span class="result-peso"></span></h1>
+                        <h2>Estado : <span class="estado-imc"></span></h2>
+                        <p class="dica">Seu peso mínimo ideal é : <span class="dica-imc"></span> </p>
+                    </div>
+                </div>
+
+                <div class="group-input-wrapper">
+                    <div class="group-input">
+                        <input type="number" id="peso">
+                        <label for="peso">Peso</label>
+                    </div>
+                    <div class="group-input">
+                        <input type="number" id="altura" placeholder="Exemplo : 170">
+                        <label for="altura">Altura</label>
+                    </div>
+                    <div class="group-input">
+                        <button class="btn-imc">Calcular</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="container-calorias" id="calorias">
+            <h1 class="title-caloria">Calculadora de calorias</h1>
+            <div class="container-caloria-wrapper">
+                <div class="resultado-caloria-wrapper">
+                    <div class="resultado-caloria">
+                        <h4>Seu metabolismo basal é de <span class="basal"></span> calorias</h4>
+                        <h4>Para manter o seu peso você precisa consumir em média <span class="manterPeso"></span> calorias</h4>
+                        <h4>Para perder peso você precisa consumir em média <span class="perderPeso"></span> calorias</h4>
+                        <h4>Para ganhar peso você precisa consumir em média <span class="ganharPeso"></span> calorias</h4>
+                    </div>
+                </div>
+
+                <div class="group-input-caloria">
+                    <div class="group-caloria">
+                        <input type="number" id="idade">
+                        <label for="idade">Idade</label>
+                    </div>
+                    <div class="group-caloria">
+                        <input type="number" id="pesoCaloria">
+                        <label for="pesoCaloria">Peso</label>
+                    </div>
+                    <div class="group-caloria">
+                        <input type="number" id="alturaCaloria">
+                        <label for="alturaCaloria">Altura</label>
+                    </div>
+                    <div class="group-caloria">
+                        <select id="nivel-atividade-fisica">
+                            <option disabled>Frequência de atividade</option>
+                            <option value="1.2">Muito baixa</option>
+                            <option value="1.375">Baixa</option>
+                            <option value="1.55">Normal</option>
+                            <option value="1.725">Alta</option>
+                            <option value="1.9">Muito alta</option>
+                        </select>
+                    </div>
+                    <div class="group-caloria">
+                        <select id="genero">
+                            <option disabled>Gênero</option>
+                            <option value="Homem">Masculino</option>
+                            <option value="Mulher">Feminino</option>
+                        </select>
+                    </div>
+
+                    <div class="group-caloria">
+                        <button class="btn-calorias">Calcular</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-footer">
+        <h1 class="title-footer">Health Calculator</h1>
+        <div class="group-footer-wrapper">
+            <div class="group-footer-nav">
+                <a href="#imc">IMC</a>
+                <a href="#calorias">Calorias</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
